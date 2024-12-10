@@ -1,0 +1,28 @@
+{
+  "canisters": {
+    "talentnet": {
+      "type": "custom",
+      "main": "src/index.ts",
+      "candid": "src/talentnet.did",
+      "candid_gen": "http",
+      "build": "npx azle talentnet",
+      "wasm": ".azle/talentnet/talentnet.wasm",
+      "gzip": true
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    },
+    "ic": {
+      "providers": ["https://ic0.app"]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": ""
+    }
+  },
+  "version": 1
+}
